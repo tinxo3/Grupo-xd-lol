@@ -6,7 +6,7 @@ var max_jumps = 1
 var remaining_jumps : int = max_jumps
 
 func doble_powerup():
-	max_jumps = 2
+	max_jumps = 2 
 
 var on_floor = false
 
@@ -33,3 +33,5 @@ func _integrate_forces(state):
 	if jump_pressed and remaining_jumps:
 		state.linear_velocity.y = dir.y * 500 * state.step
 		remaining_jumps -= 1
+func pad():
+	 pass
