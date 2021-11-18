@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/CameraAssembly.gd" type="Script" id=3]
 
 [node name="Level1" type="Spatial"]
 
 [node name="CSGBox" type="CSGBox" parent="."]
+use_collision = true
 width = 3.38765
 height = 1.40193
 depth = 6.46068
@@ -15,24 +18,28 @@ polygon = PoolVector2Array( 0, 0, 0, 1, 0.572088, 1.00617, 2.03627, -0.0567617 )
 
 [node name="CSGBox2" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09041, 1.84362, -5.15628 )
+use_collision = true
 width = 2.76076
 height = 0.337052
 depth = 2.24448
 
 [node name="CSGBox3" type="CSGBox" parent="."]
 transform = Transform( -0.0129674, 0, -0.999916, 0, 1, 0, 0.999916, 0, -0.0129674, 1.09414, 1.83466, -8.3844 )
+use_collision = true
 width = 2.595
 height = 0.337052
 depth = 0.504413
 
 [node name="CSGBox4" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13428, 3.18105, -11.6406 )
+use_collision = true
 width = 2.38198
 height = 0.337052
 depth = 1.35774
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 transform = Transform( 0.476278, 0, 0, 0, 1, 0, 0, 0, 0.485715, -1.40583, 3.24236, -11.6214 )
+use_collision = true
 height = 0.235127
 
 [node name="CSGCylinder" type="CSGCylinder" parent="CSGCylinder"]
@@ -42,6 +49,7 @@ radius = 0.153726
 
 [node name="CSGCylinder2" type="CSGCylinder" parent="."]
 transform = Transform( 0.476278, 0, 0, 0, 1, 0, 0, 0, 0.485715, -3.03357, 3.24236, -11.6214 )
+use_collision = true
 height = 0.235127
 
 [node name="CSGCylinder" type="CSGCylinder" parent="CSGCylinder2"]
@@ -51,6 +59,7 @@ radius = 0.153726
 
 [node name="CSGBox6" type="CSGBox" parent="."]
 transform = Transform( -0.375682, 0, -0.00188487, 0, 1, 0, 0.000708103, 0, -0.999998, -5.10093, 1.04352, -13.3443 )
+use_collision = true
 width = 3.38765
 height = 1.40193
 depth = 6.46068
@@ -61,12 +70,14 @@ polygon = PoolVector2Array( 0, 0, 0, 1, 0.572088, 1.00617, 2.03627, -0.0567617 )
 
 [node name="CSGBox5" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00707, 2.65528, -18.7489 )
+use_collision = true
 width = 1.68105
 height = 0.337052
 depth = 1.03831
 
 [node name="CSGBox7" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00707, 2.80357, -21.6443 )
+use_collision = true
 width = 2.59508
 height = 0.337052
 depth = 1.53597
@@ -85,3 +96,16 @@ depth = 0.197709
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0964691, -5.10559, 3.55863, -22.5558 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0188577, 1.31697, 2.02294 )
+
+[node name="CameraAssembly" type="Position3D" parent="."]
+transform = Transform( 0.707107, -0.388888, 0.590564, 0, 0.835184, 0.549971, -0.707107, -0.388888, 0.590564, 0, 0.355868, 0 )
+script = ExtResource( 3 )
+target_path = NodePath("../Player")
+
+[node name="Camera" type="Camera" parent="CameraAssembly"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.72853e-06, 16.644 )
+current = true
+fov = 25.0
