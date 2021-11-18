@@ -98,4 +98,4 @@ depth = 0.197709
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0964691, -5.6132, 4.93111, -27.2081 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.280319, 0, 0, 0, 0.280319, 0, 0, 0, 0.280319, -0.689919, 1.60253, 2.41153 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 1.39712, 0 )
