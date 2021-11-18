@@ -2,7 +2,7 @@ extends RigidBody
 
 # Raycast que chequea si estamos pisando
 onready var ground_sensor = $ground_sensor
-
+onready var anims = $anitroll
 # True si estamos pisando y false si no
 var on_floor = false
 
@@ -78,3 +78,8 @@ func _integrate_forces(state):
 		# Aplicamos instantaneamente la velocidad de salto
 		state.linear_velocity.y = dir.y * jump_speed
 		remaining_jumps -= 1
+
+
+func _on_Area_body_entered(body):
+	if "Player" in body.name($Area):
+		anims.play("caer")

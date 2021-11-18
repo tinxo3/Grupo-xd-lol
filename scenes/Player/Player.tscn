@@ -37,7 +37,7 @@ transform = Transform( 0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107
 script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="camera_assembly"]
-transform = Transform( 1, -2.98023e-08, 2.98023e-08, 2.98023e-08, 1, 0, -2.98023e-08, 1.49012e-08, 1, 0, 0, 40 )
+transform = Transform( 1, 0, 0, 0, 1, -5.66244e-07, 0, -5.96046e-08, 1, 0.127071, -0.0403473, 21.8409 )
 current = true
 fov = 45.0
 far = 500.0
