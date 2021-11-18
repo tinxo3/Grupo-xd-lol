@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/CameraAssembly.gd" type="Script" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 1, 0, 0.843137, 1 )
@@ -10,12 +13,13 @@ albedo_color = Color( 0, 0.133333, 1, 1 )
 albedo_color = Color( 0.282353, 0.882353, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 1, 0, 0, 1 )
+albedo_color = Color( 1, 0.537255, 0, 1 )
 
 [node name="Level2" type="Spatial"]
 
 [node name="spawn" type="CSGBox" parent="."]
 transform = Transform( 4.57269, 0, 0, 0, 0.186331, 0, 0, 0, 3.79844, 0, 0, 0 )
+use_collision = true
 depth = 2.25048
 
 [node name="plat1" type="CSGBox" parent="."]
@@ -122,3 +126,16 @@ use_collision = true
 [node name="CSGBox2" type="CSGBox" parent="."]
 transform = Transform( 0.314677, 0, 0, 0, 0.11633, 0, 0, 0, 3.25472, 0.0212029, 2.16714, 46.4019 )
 use_collision = true
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.271793, 0, 0.962356, 0, 1, 0, -0.962356, 0, 0.271793, 0.169996, 0.635577, 0.465026 )
+
+[node name="CameraAssembly" type="Position3D" parent="."]
+transform = Transform( 0.707107, -0.388888, 0.590564, 0, 0.835184, 0.549971, -0.707107, -0.388888, 0.590564, 0.0556047, 0.355868, 0.264119 )
+script = ExtResource( 2 )
+target_path = NodePath("../Player")
+
+[node name="Camera" type="Camera" parent="CameraAssembly"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.72853e-06, 16.644 )
+current = true
+fov = 25.0
