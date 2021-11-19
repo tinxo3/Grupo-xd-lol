@@ -21,6 +21,7 @@ extents = Vector3( 0.186287, 0.583198, 0.219605 )
 [sub_resource type="CubeMesh" id=5]
 
 [node name="Level" type="Spatial"]
+pause_mode = 1
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
