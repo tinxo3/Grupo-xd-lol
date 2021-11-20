@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/CameraAssembly.gd" type="Script" id=3]
+[ext_resource path="res://Powerup.tscn" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 250, 2.5, 250 )
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 500, 500 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 100, 100, 100 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.186287, 0.583198, 0.219605 )
+
+[sub_resource type="CubeMesh" id=5]
+
+[node name="Level" type="Spatial"]
+pause_mode = 1
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.719337, -0.427676, 0.547401, 0, 0.788011, 0.615661, -0.694661, -0.442868, 0.566845, 0, 0.573562, 0 )
+input_ray_pickable = false
+mass = 1.0
+gravity_scale = 2.0
+can_sleep = false
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.1913, 0 )
+shadow_enabled = true
+
+[node name="CameraAssembly" type="Position3D" parent="."]
+transform = Transform( 0.707107, -0.388888, 0.590564, 0, 0.835184, 0.549971, -0.707107, -0.388888, 0.590564, 0, 0.355868, 0 )
+script = ExtResource( 3 )
+target_path = NodePath("../Player")
+
+[node name="Camera" type="Camera" parent="CameraAssembly"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.72853e-06, 16.644 )
+current = true
+fov = 25.0
+
+[node name="Spatial" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.310781, 0.351896, -3.20191 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.74587, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 5.43596, 0, 0, 0, 1.82088, 0, 0, 0, 4.93746, 0, 0, 0 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="ConeTwistJoint" type="ConeTwistJoint" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.106805, 0 )
+nodes/node_a = NodePath("..")

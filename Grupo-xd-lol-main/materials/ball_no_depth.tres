@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://materials/ball.material" type="Material" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[resource]
+next_pass = ExtResource( 1 )
+flags_transparent = true
+flags_no_depth_test = true
+albedo_color = Color( 1, 1, 1, 0.466667 )
+albedo_texture = ExtResource( 2 )
