@@ -3,6 +3,7 @@
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 
 [node name="level 3" type="Spatial"]
+pause_mode = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00234568, 0.0102912, -0.00272226 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

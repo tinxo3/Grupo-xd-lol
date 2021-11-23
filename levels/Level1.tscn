@@ -4,6 +4,7 @@
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=4]
 
 [node name="Level1" type="Spatial"]
+pause_mode = 2
 
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715709, 0, 0.403293 )

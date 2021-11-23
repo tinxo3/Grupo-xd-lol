@@ -104,6 +104,7 @@ albedo_color = Color( 0.282353, 0.882353, 1, 1 )
 albedo_color = Color( 1, 0.537255, 0, 1 )
 
 [node name="Level2" type="Spatial"]
+pause_mode = 2
 
 [node name="spawn" type="CSGBox" parent="."]
 transform = Transform( 4.57269, 0, 0, 0, 0.186331, 0, 0, 0, 3.79844, 0, 0, 0 )
