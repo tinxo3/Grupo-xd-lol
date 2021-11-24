@@ -6,11 +6,9 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
-func _on_Spatial_body_entered(body):
-	if "Player" in body.name:
-		body.pad()
+func _on_pad_body_exited(body):
+	if body.get_name() == "Player":
+		body.velocidad()
+		print("velocidad!")

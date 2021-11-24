@@ -9,7 +9,7 @@ var on_floor = false
 # Velocidad maxima horizontal en el piso en unidades por segundo
 var motion_speed := 18.0
 # Velocidad vertical a aplicar cuando salta en unidades por segundo
-var jump_speed := 23.0
+var jump_speed := 13.0
 
 # estas dos variables controlan que tan rapido cambia la velocidad del personaje
 # 1 significa que llega a la velocidad maxima instantaneamente
@@ -79,7 +79,3 @@ func _integrate_forces(state):
 		state.linear_velocity.y = dir.y * jump_speed
 		remaining_jumps -= 1
 
-
-func _on_Area_body_entered(body):
-	if "Player" in body.name($Area):
-		anims.play("caer")
