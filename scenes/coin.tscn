@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Images, sprites/material-coin.material" type="Material" id=1]
-[ext_resource path="res://Assets/coin.gd" type="Script" id=2]
+[ext_resource path="res://scenes/coin.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "coin_Cylinder"
@@ -19,8 +19,8 @@ surfaces/0 = {
 }
 
 [sub_resource type="CylinderShape" id=2]
-radius = 0.353284
-height = 0.253249
+radius = 0.336572
+height = 0.221002
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.877675, 0 ), Vector3( 0, 0.681231, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1.41975, 0 ), Vector3( 0, 0.405183, 0 ) ]
 }
 
 [node name="coin" type="Area"]
@@ -61,13 +61,13 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1.02044, 0, 0, 0, -4.46048e-08, -1.02044, 0, 1.02044, -4.46048e-08, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
 anims/die = SubResource( 4 )
 

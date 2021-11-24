@@ -3,19 +3,19 @@ extends Area
 signal coinCollected
 
 func _ready():
-	pass # Replace with function body.
+	pass 
 
 func _physics_process(delta):
 	rotate_y(deg2rad(3))
+	pass
 
 
 func _on_coin_body_entered(body):
 	if body.name == "Player":
-		$AnimationPlayer.play("die")
-		$Timer .start()
-
+		emit_signal("coinCollected")
+		$Animation.play("die")
+		$Timer.start()
 
 
 func _on_Timer_timeout():
-	emit_signal("coinCollected")
 	queue_free()
