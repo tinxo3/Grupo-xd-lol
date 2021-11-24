@@ -13,7 +13,7 @@ func _on_coin_body_entered(body):
 	if body.name == "Player":
 		$AnimationPlayer.play("die")
 		$Timer .start()
-print (" hola hijos de puta ")
+
 
 
 func _on_Timer_timeout():
