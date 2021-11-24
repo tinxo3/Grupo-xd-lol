@@ -6,7 +6,7 @@ func _on_CheckBox_toggled(button_pressed):
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/Menuprincipal.tscn")
+	get_tree().change_scene("res://UI/Menuprincipal.tscn")
 
 
 func _on_HSlider_value_changed(value):

@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/About.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Menus Background.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 33
+font_data = ExtResource( 1 )
+
+[node name="About" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenusBackground" type="Sprite" parent="."]
+position = Vector2( 512.667, 300.5 )
+scale = Vector2( 0.533681, 0.556482 )
+texture = ExtResource( 3 )
+
+[node name="Título" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -60.0
+margin_top = 139.0
+margin_right = 62.0
+margin_bottom = 258.0
+custom_fonts/font = SubResource( 1 )
+text = "About
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Santiago" type="Label" parent="."]
+margin_left = 158.0
+margin_top = 265.0
+margin_right = 336.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Santiago Ramos"
+align = 1
+
+[node name="Nicolás" type="Label" parent="."]
+margin_left = 602.0
+margin_top = 265.0
+margin_right = 780.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Nicolas Gabriel Marino"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Juan" type="Label" parent="."]
+margin_left = 134.0
+margin_top = 357.0
+margin_right = 366.0
+margin_bottom = 386.0
+custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Juan Manuel del Valle"
+align = 1
+
+[node name="Lorenzo" type="Label" parent="."]
+margin_left = 603.0
+margin_top = 357.0
+margin_right = 835.0
+margin_bottom = 386.0
+custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Lorenzo Pivotto"
+align = 1
+
+[node name="ReturnMainMenu" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -132.5
+margin_top = -62.0
+margin_right = 132.5
+margin_bottom = -22.0
+custom_fonts/font = SubResource( 3 )
+text = "Return to Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ReturnMainMenu" to="." method="_on_ReturnMainMenu_pressed"]
