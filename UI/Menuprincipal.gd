@@ -14,4 +14,4 @@ func _on_Quit_pressed():
 
 
 func _on_Options_pressed():
-	get_tree().change_scene("res://scenes/OptionsMenu.tscn")
+	get_tree().change_scene("res://UI/OptionsMenu.tscn")

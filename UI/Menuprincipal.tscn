@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Menuprincipal.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Main Menu Background.png" type="Texture" id=3]
+
+[sub_resource type="ImageTexture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 use_filter = true
@@ -103,6 +106,14 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 6 )
+
+[node name="MainMenuBackground" type="Sprite" parent="Sprite"]
+position = Vector2( 512.333, 300.063 )
+scale = Vector2( 0.534028, 0.55544 )
+texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
