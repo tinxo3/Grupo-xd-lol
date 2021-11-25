@@ -147,7 +147,7 @@ use_collision = true
 depth = 2.25048
 
 [node name="fisicas" type="CSGBox" parent="."]
-transform = Transform( 1.60859, 0, 0, 0, 0.144036, 0, 0, 0, 0.517382, 0.205621, -0.142378, 59.6459 )
+transform = Transform( -0.0143462, 0, -0.517361, 0, 0.144036, 0, 1.60853, 0, -0.00461425, 0.20562, -0.142378, 59.6459 )
 use_collision = true
 depth = 2.25048
 material = SubResource( 4 )
@@ -167,7 +167,7 @@ transform = Transform( 0.314677, 0, 0, 0, 0.11633, 0, 0, 0, 3.25472, 0.0212029, 
 use_collision = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 0.501633, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0568243, 1.09639, 54.1467 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.998014, -1.93882e-09, -0.0629996, -0.0629995, -0.00178026, 0.998012, -0.000112157, 0.999998, 0.00177672, 0, 31.8742, 53.9548 )
