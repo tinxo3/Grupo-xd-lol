@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.5
+height = 0.18
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 0.5
+bottom_radius = 0.2
+height = 0.18
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Disco con fisicas" type="RigidBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Disco con fisicas"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Disco con fisicas/CollisionShape"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="ConeTwistJoint" type="ConeTwistJoint" parent="Disco con fisicas"]
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../RigidBody")
+
+[node name="RigidBody" type="RigidBody" parent="Disco con fisicas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.687705, 0 )
