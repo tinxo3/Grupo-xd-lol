@@ -3,7 +3,7 @@ extends CanvasLayer
 
 
 func _on_RestartButton_pressed() -> void:
-	get_tree().change_scene("res://scenes/Level.tscn")
+	get_tree().change_scene("res://levels/Level1.tscn")
 
 
 func _on_QuitButton_pressed() -> void:

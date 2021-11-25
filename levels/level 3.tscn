@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/perderlvl3.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
 
 [node name="level 3" type="Spatial"]
 pause_mode = 2
@@ -203,3 +206,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7543, 0, -7.78436 )
 use_collision = true
 width = 4.98639
 depth = 4.42219
+
+[node name="Perder" type="Spatial" parent="."]
+
+[node name="Area" type="Area" parent="Perder"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Perder/Area"]
+transform = Transform( 67.6778, 0, 0, 0, 0.146577, 0, 0, 0, 37.1121, -25.3823, -6.64714, 0 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
