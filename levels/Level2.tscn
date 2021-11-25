@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Troll.tscn" type="PackedScene" id=2]
 [ext_resource path="res://pad.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Powerup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://powerup_malo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0, 0.133333, 1, 1 )
@@ -17,7 +19,7 @@ albedo_color = Color( 1, 0.537255, 0, 1 )
 pause_mode = 2
 
 [node name="spawn" type="CSGBox" parent="."]
-transform = Transform( 4.57269, 0, 0, 0, 0.186331, 0, 0, 0, 3.79844, 0, 0, 0 )
+transform = Transform( 7.96617, 0, 0, 0, 0.324611, 0, 0, 0, 6.61733, 1.01487, -0.114559, -2.95802 )
 use_collision = true
 depth = 2.25048
 
@@ -130,3 +132,9 @@ transform = Transform( -0.998014, -1.93882e-09, -0.0629996, -0.0629995, -0.00178
 
 [node name="pad" parent="." instance=ExtResource( 3 )]
 transform = Transform( 4.71605, 0, 0, 0, 0.720053, 0, 0, 0, 4.90925, -2.1009, 0.389373, -2.29081 )
+
+[node name="powerup" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.96111, 0, 0, 0, 1.96111, 0, 0, 0, 1.96111, 0.614774, 1.30435, -2.47174 )
+
+[node name="powerup_malo" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.540835, 0, 0, 0, 0.540835, 0, 0, 0, 0.540835, 3.86162, 0.742532, -5.89765 )

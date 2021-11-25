@@ -4,7 +4,7 @@ extends RigidBody
 onready var ground_sensor = $ground_sensor
 # True si estamos pisando y false si no
 var on_floor = false
-
+onready var powerup_timer_node = $powerup_timer
 # Velocidad maxima horizontal en el piso en unidades por segundo
 var motion_speed := 18.0
 # Velocidad vertical a aplicar cuando salta en unidades por segundo
@@ -14,11 +14,11 @@ var jump_speed := 13.0
 # 1 significa que llega a la velocidad maxima instantaneamente
 # 0.1 significa que en cada frame avanza un 10% entre la velocidad actual y la 
 # velocidad maxima
-var running_accel := 0.2 
+var running_accel := 0.05 #0.2
 var air_accel := 0.08
 
 # Cantidad de saltos antes de tocar el piso. Ej: 2 para tener doble salto
-var max_jumps := 2
+var max_jumps := 1
 
 # Cantidad de saltos restantes. Se resetea al tocar el piso
 var remaining_jumps : int = max_jumps
@@ -78,3 +78,22 @@ func _integrate_forces(state):
 		state.linear_velocity.y = dir.y * jump_speed
 		remaining_jumps -= 1
 
+func doble_powerup():
+	max_jumps = 2 
+	remaining_jumps = max_jumps
+func velocidad():
+	motion_speed = 28
+	$powerup_timer.start()
+	print("subio")
+func disable_velocidad():
+	motion_speed = 18
+func _on_powerup_timer_timeout():
+	disable_velocidad()
+
+func powerup_malo():
+	motion_speed = 9
+	$powerup_malo_timer.start()
+func disable_powerup_malo():
+	motion_speed = 18
+func _on_powerup_malo_timer_timeout():
+	disable_powerup_malo()
