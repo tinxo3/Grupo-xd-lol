@@ -3,6 +3,7 @@
 [ext_resource path="res://troll1.gd" type="Script" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
+resource_local_to_scene = true
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -100,10 +101,10 @@ anims/caer = SubResource( 3 )
 next/RESET = "caer"
 
 [node name="Area" type="Area" parent="Troll"]
-transform = Transform( 1.54269, 0, 0, 0, 5.77627, 0, 0, 0, 0.371969, 3.52664, 74.9671, -3.38576 )
+transform = Transform( 1.54269, 0, 0, 0, 5.77627, 0, 0, 0, 0.371969, 0, 1.23483, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Troll/Area"]
-transform = Transform( 0.499855, 0, 0, 0, 0.165178, 0, 0, 0, 2.67027, -2.29098, -12.7364, 9.0893 )
+transform = Transform( 0.499855, 0, 0, 0, 0.165178, 0, 0, 0, 2.67027, 0, 0, 0 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Troll/Area" to="Troll" method="_on_Area_body_entered"]

@@ -4,6 +4,9 @@ onready var anims = $anitroll
 # var a = 2
 # var b = "text"
 
+func _ready():
+	#material = material.duplicate(true)
+	pass
 
 # Called when the node enters the scene tree for the first time.
 

@@ -25,7 +25,7 @@ __meta__ = {
 }
 
 [node name="MenusBackground" type="Sprite" parent="."]
-position = Vector2( 512.667, 300.5 )
+position = Vector2( 512, 293 )
 scale = Vector2( 0.533681, 0.556482 )
 texture = ExtResource( 3 )
 
@@ -33,9 +33,9 @@ texture = ExtResource( 3 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -60.0
-margin_top = 139.0
+margin_top = 85.0
 margin_right = 62.0
-margin_bottom = 258.0
+margin_bottom = 204.0
 custom_fonts/font = SubResource( 1 )
 text = "About
 "
@@ -44,20 +44,39 @@ __meta__ = {
 }
 
 [node name="Santiago" type="Label" parent="."]
-margin_left = 158.0
-margin_top = 265.0
-margin_right = 336.0
-margin_bottom = 294.0
+margin_left = 146.0
+margin_top = 220.0
+margin_right = 324.0
+margin_bottom = 249.0
+rect_scale = Vector2( 1.1511, 1.1511 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Santiago Ramos"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Martin" type="Label" parent="."]
+margin_left = 406.0
+margin_top = 284.0
+margin_right = 584.0
+margin_bottom = 313.0
+rect_scale = Vector2( 1.14152, 1.14152 )
+custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Martin Lopez"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Nicolás" type="Label" parent="."]
-margin_left = 602.0
-margin_top = 265.0
-margin_right = 780.0
-margin_bottom = 294.0
+margin_left = 628.0
+margin_top = 221.0
+margin_right = 872.0
+margin_bottom = 250.0
+rect_scale = Vector2( 1.0798, 1.0798 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Nicolas Gabriel Marino"
@@ -67,20 +86,25 @@ __meta__ = {
 }
 
 [node name="Juan" type="Label" parent="."]
-margin_left = 134.0
-margin_top = 357.0
-margin_right = 366.0
-margin_bottom = 386.0
+margin_left = 111.0
+margin_top = 361.0
+margin_right = 343.0
+margin_bottom = 390.0
+rect_scale = Vector2( 1.08506, 1.08506 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Juan Manuel del Valle"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Lorenzo" type="Label" parent="."]
-margin_left = 603.0
-margin_top = 357.0
-margin_right = 835.0
-margin_bottom = 386.0
+margin_left = 617.0
+margin_top = 367.0
+margin_right = 849.0
+margin_bottom = 396.0
+rect_scale = Vector2( 1.19976, 1.19976 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Lorenzo Pivotto"

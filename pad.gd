@@ -8,7 +8,7 @@ func _ready():
 
 
 
-func _on_pad_body_exited(body):
-	if body.get_name() == "Player":
-		body.velocidad()
-		print("velocidad!")
+#func _on_pad_body_exited(body):
+	#if body.get_name() == "Player":
+		#body.velocidad()
+		#print("velocidad!")

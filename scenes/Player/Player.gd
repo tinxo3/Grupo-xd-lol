@@ -2,7 +2,6 @@ extends RigidBody
 
 # Raycast que chequea si estamos pisando
 onready var ground_sensor = $ground_sensor
-onready var anims = $anitroll
 # True si estamos pisando y false si no
 var on_floor = false
 
