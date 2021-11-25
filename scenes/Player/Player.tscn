@@ -41,3 +41,11 @@ transform = Transform( 1, 0, 0, 0, 1, -5.66244e-07, 0, -5.96046e-08, 1, 0.127071
 current = true
 fov = 45.0
 far = 500.0
+
+[node name="powerup_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="powerup_malo_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="powerup_timer" to="." method="_on_powerup_timer_timeout"]
+[connection signal="timeout" from="powerup_malo_timer" to="." method="_on_powerup_malo_timer_timeout"]

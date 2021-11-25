@@ -23,4 +23,8 @@ transform = Transform( 0.225145, 0, 0, 0, 0.190373, 0, 0, 0, 0.229138, 0, 0, 0.0
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
-[connection signal="body_exited" from="." to="." method="_on_pad_body_exited"]
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_pad_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
