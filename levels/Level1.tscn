@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://levels/contador.gd" type="Script" id=6]
+[ext_resource path="res://Assets/aAbstractGroovy.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 49
@@ -13,7 +14,7 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 73
-font_data = ExtResource( 5 )
+font_data = ExtResource( 7 )
 
 [node name="Level1" type="Spatial"]
 pause_mode = 2
