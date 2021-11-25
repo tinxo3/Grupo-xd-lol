@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Menuprincipal.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Main Menu Background.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Logo.png" type="Texture" id=4]
 
 [sub_resource type="ImageTexture" id=6]
 
@@ -108,20 +109,26 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.12, 0.12 )
 texture = SubResource( 6 )
 
 [node name="MainMenuBackground" type="Sprite" parent="Sprite"]
-position = Vector2( 512.333, 300.063 )
-scale = Vector2( 0.534028, 0.55544 )
+position = Vector2( 4300, 2516.67 )
+scale = Vector2( 4.53403, 4.71582 )
 texture = ExtResource( 3 )
+
+[node name="Logo" type="Sprite" parent="Sprite"]
+position = Vector2( 1641.67, 966.667 )
+scale = Vector2( 1.33333, 1.33333 )
+texture = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = -199.0
-margin_right = 114.0
-margin_bottom = -119.0
+margin_left = 18.0
+margin_top = -255.0
+margin_right = 112.0
+margin_bottom = -152.0
 rect_scale = Vector2( 2.28, 2.28 )
 custom_constants/separation = 5
 alignment = 1
@@ -131,7 +138,7 @@ __meta__ = {
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 margin_right = 94.0
-margin_bottom = 23.0
+margin_bottom = 22.0
 focus_neighbour_top = NodePath("../Quit")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
@@ -140,15 +147,23 @@ text = "Start Game"
 [node name="Options" type="Button" parent="VBoxContainer"]
 margin_top = 28.0
 margin_right = 94.0
-margin_bottom = 51.0
+margin_bottom = 50.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "Options"
 
+[node name="About" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 94.0
+margin_bottom = 76.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "About"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 margin_top = 56.0
 margin_right = 94.0
-margin_bottom = 80.0
+margin_bottom = 78.0
 focus_neighbour_bottom = NodePath("../Start")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
@@ -160,4 +175,5 @@ anims/fade_in = SubResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/About" to="." method="_on_About_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
