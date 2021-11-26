@@ -145,6 +145,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.224903, 1.40087, -4.99396 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.998014, -1.93882e-09, -0.0629996, -0.0629995, -0.00178026, 0.998012, -0.000112157, 0.999998, 0.00177672, 0, 31.8742, 53.9548 )
+shadow_enabled = true
 
 [node name="powerup" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.950416, 0, 0, 0, 0.950416, 0, 0, 0, 0.950416, -0.300708, 0.388181, 54.5096 )

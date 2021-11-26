@@ -225,6 +225,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.89692, 0 )
 [node name="perder" parent="Perder" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.4605, -15.7991 )
 
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.00844725, 0.999964, 0, -0.999964, 0.00844725, 0, 22.7426, -14.55 )
+shadow_enabled = true
+
 [connection signal="body_entered" from="Coins group/Coin holder/coin" to="Coins group/Coin holder/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins group/Coin holder/coin" to="Control/contador" method="_on_coinCollected"]
 [connection signal="body_entered" from="Coins group/Coin holder2/coin" to="Coins group/Coin holder2/coin" method="_on_coin_body_entered"]

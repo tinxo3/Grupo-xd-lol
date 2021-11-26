@@ -196,7 +196,8 @@ transform = Transform( 67.6778, 0, 0, 0, 0.146577, 0, 0, 0, 37.1121, -25.3823, -
 shape = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.781597, 0.623784, 0, -0.623784, 0.781597, -17.4751, 7.91772, 18.6357 )
+transform = Transform( 1, 0, 0, 0, 0.0501575, 0.998741, 0, -0.998741, 0.0501575, -17.4751, 7.91772, 1.10795 )
+shadow_enabled = true
 
 [node name="Troll" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.0200884, 0, -0.357123, 0, 1, 0, 0.644695, 0, 0.00142148, -29.3238, 0.403568, 12.9865 )
