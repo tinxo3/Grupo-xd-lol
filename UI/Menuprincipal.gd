@@ -1,9 +1,8 @@
 extends Control
 
-
 func _ready():
 	$VBoxContainer/Start.grab_focus()
-
+	$AnimationPlayer.play("fade_in")
 func _on_Start_pressed():
 	get_tree().change_scene("res://levels/Level1.tscn")
 

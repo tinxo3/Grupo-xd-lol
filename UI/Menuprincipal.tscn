@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Menuprincipal.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Main Menu Background.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Logo.png" type="Texture" id=4]
+[ext_resource path="res://Assets/martin_cancion_menu.mp3" type="AudioStream" id=5]
 
 [sub_resource type="ImageTexture" id=6]
 
@@ -94,10 +95,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1.8, 2.9 ),
+"times": PoolRealArray( 1.8, 2.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 200 ), Vector2( 0, 56 ) ]
+"values": [ Vector2( 0, 200 ), Vector2( 0, 79 ) ]
 }
 
 [node name="Menuprincipal" type="Control"]
@@ -125,10 +126,10 @@ texture = ExtResource( 4 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 18.0
-margin_top = -255.0
-margin_right = 112.0
-margin_bottom = -152.0
+margin_left = 8.00002
+margin_top = -241.0
+margin_right = 102.0
+margin_bottom = -138.0
 rect_scale = Vector2( 2.28, 2.28 )
 custom_constants/separation = 5
 alignment = 1
@@ -168,10 +169,18 @@ focus_neighbour_bottom = NodePath("../Start")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
 anims/fade_in = SubResource( 4 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/About.gd" type="Script" id=2]
@@ -8,9 +8,189 @@
 size = 60
 font_data = ExtResource( 1 )
 
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 432, -103 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "anititulo"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 432, -103 ), Vector2( 456, 64 ) ]
+}
+
 [sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -200, 220 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "anisantiago"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -200, 220 ), Vector2( 134, 220 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 406, 646 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "animartin"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 406, 646 ), Vector2( 427, 288 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1037, 221 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "aninicolas"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1037, 221 ), Vector2( 689, 221 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -247, 361 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "anijuan"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -247, 361 ), Vector2( 98, 361 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1046, 367 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "anilorenzo"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1046, 367 ), Vector2( 688, 367 ) ]
+}
 
 [sub_resource type="DynamicFont" id=3]
 size = 33
@@ -29,13 +209,11 @@ position = Vector2( 512, 293 )
 scale = Vector2( 0.533681, 0.556482 )
 texture = ExtResource( 3 )
 
-[node name="Título" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -60.0
-margin_top = 85.0
-margin_right = 62.0
-margin_bottom = 204.0
+[node name="Titulo" type="Label" parent="."]
+margin_left = 432.0
+margin_top = -103.0
+margin_right = 554.001
+margin_bottom = 16.0
 custom_fonts/font = SubResource( 1 )
 text = "About
 "
@@ -43,12 +221,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="anititulo" type="AnimationPlayer" parent="Titulo"]
+anims/RESET = SubResource( 4 )
+anims/anititulo = SubResource( 5 )
+
 [node name="Santiago" type="Label" parent="."]
-margin_left = 146.0
+margin_left = -200.0
 margin_top = 220.0
-margin_right = 324.0
+margin_right = -22.0
 margin_bottom = 249.0
-rect_scale = Vector2( 1.1511, 1.1511 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Santiago Ramos"
@@ -57,12 +238,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="anisantiago" type="AnimationPlayer" parent="Santiago"]
+anims/RESET = SubResource( 6 )
+anims/anisantiago = SubResource( 7 )
+
 [node name="Martin" type="Label" parent="."]
 margin_left = 406.0
-margin_top = 284.0
+margin_top = 646.0
 margin_right = 584.0
-margin_bottom = 313.0
-rect_scale = Vector2( 1.14152, 1.14152 )
+margin_bottom = 675.0
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Martin Lopez"
@@ -71,12 +255,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nicolás" type="Label" parent="."]
-margin_left = 628.0
+[node name="animartin" type="AnimationPlayer" parent="Martin"]
+anims/RESET = SubResource( 8 )
+anims/animartin = SubResource( 9 )
+
+[node name="Nicolas" type="Label" parent="."]
+margin_left = 1037.0
 margin_top = 221.0
-margin_right = 872.0
+margin_right = 1281.0
 margin_bottom = 250.0
-rect_scale = Vector2( 1.0798, 1.0798 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Nicolas Gabriel Marino"
@@ -85,12 +272,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="aninicolas" type="AnimationPlayer" parent="Nicolas"]
+anims/RESET = SubResource( 10 )
+anims/aninicolas = SubResource( 11 )
+
 [node name="Juan" type="Label" parent="."]
-margin_left = 111.0
+margin_left = -247.0
 margin_top = 361.0
-margin_right = 343.0
+margin_right = -3.0
 margin_bottom = 390.0
-rect_scale = Vector2( 1.08506, 1.08506 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Juan Manuel del Valle"
@@ -99,16 +289,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="anijuan" type="AnimationPlayer" parent="Juan"]
+anims/RESET = SubResource( 12 )
+anims/anijuan = SubResource( 13 )
+
 [node name="Lorenzo" type="Label" parent="."]
-margin_left = 617.0
+margin_left = 1046.0
 margin_top = 367.0
-margin_right = 849.0
+margin_right = 1290.0
 margin_bottom = 396.0
-rect_scale = Vector2( 1.19976, 1.19976 )
 custom_colors/font_color = Color( 0.972549, 0.921569, 0.180392, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Lorenzo Pivotto"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anilorenzo" type="AnimationPlayer" parent="Lorenzo"]
+anims/RESET = SubResource( 14 )
+anims/anilorenzo = SubResource( 15 )
 
 [node name="ReturnMainMenu" type="Button" parent="."]
 anchor_left = 0.5

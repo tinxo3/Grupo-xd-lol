@@ -23,7 +23,6 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="MenusBackground" type="Sprite" parent="."]
-visible = false
 position = Vector2( 512.667, 300.5 )
 scale = Vector2( 0.533681, 0.556482 )
 texture = ExtResource( 3 )
