@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Troll.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/Perderlvl2.gd" type="Script" id=3]
 [ext_resource path="res://Powerup.tscn" type="PackedScene" id=4]
 [ext_resource path="res://powerup_malo.tscn" type="PackedScene" id=5]
 
@@ -13,6 +14,8 @@ albedo_color = Color( 0.282353, 0.882353, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 1, 0.537255, 0, 1 )
+
+[sub_resource type="BoxShape" id=5]
 
 [node name="Level2" type="Spatial"]
 pause_mode = 2
@@ -134,3 +137,15 @@ transform = Transform( 0.950416, 0, 0, 0, 0.950416, 0, 0, 0, 0.950416, -0.300708
 
 [node name="powerup_malo" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1.05559, 0, 0, 0, 0.462026, 0, 0, 0, 0.462026, 0, 0.234962, 2.85864 )
+
+[node name="Perder" type="Spatial" parent="."]
+
+[node name="Area" type="Area" parent="Perder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.1876, 0 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Perder/Area"]
+transform = Transform( 50.2932, 0, 0, 0, 0.176581, 0, 0, 0, 130.877, 0, 0, 35.8866 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
