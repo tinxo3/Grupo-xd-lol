@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/perderlvl3.gd" type="Script" id=2]
+[ext_resource path="res://Troll.tscn" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -10,48 +11,45 @@ pause_mode = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00234568, 0.0102912, -0.00272226 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4534, 5.90029, 0.136616 )
+transform = Transform( 0.999929, 0, -0.011903, 0, 1, 0, 0.011903, 0, 0.999929, 6.1235, 1.82431, 3.63335 )
+
+[node name="Troll8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.41266, 0, -0.0168161, 0, 2.68134, 0, 0.00359564, 0, 0.302056, 0.176465, 0.179964, -11.5384 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 2.12623, 0, 0, 0, 0.567508, 0, 0, 0, 1.52817, -2.96896, 0, 3.58537 )
 use_collision = true
 
 [node name="CSGPolygon" type="CSGPolygon" parent="CSGBox"]
 transform = Transform( 1.19457, 0, 0, 0, 1, 0, 0, 0, 3.07122, -0.584933, 0, 1.50104 )
 
 [node name="CSGBox2" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, 0, 0.591062, -5.74852 )
+transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, -3.00134, 0.591062, -2.16315 )
 use_collision = true
 width = 0.708346
 depth = 3.63602
 
 [node name="CSGBox3" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, 0, 0.591062, 6.12857 )
+transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, -2.61587, 0.591062, 9.71393 )
 use_collision = true
 width = 0.708346
 depth = 3.63602
 
 [node name="CSGBox26" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0097456, 0.594152, 11.7925 )
-use_collision = true
-width = 0.759883
-height = 0.704773
-depth = 0.964082
-
-[node name="CSGBox27" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0097456, 0.594152, -12.2063 )
+transform = Transform( 2.72682, 0, 0, 0, 1, 0, 0, 0, 2.00155, -2.71807, 0.594152, 15.3779 )
 use_collision = true
 width = 0.759883
 height = 0.704773
 depth = 0.964082
 
 [node name="CSGBox4" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23861, 0, 0 )
+transform = Transform( 2.29842, 0, 0, 0, 0.526712, 0, 0, 0, 3.95431, 6.26484, 0, 3.58537 )
 use_collision = true
 width = 3.3827
 depth = 2.34595
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79583, 0.791643, 0 )
+transform = Transform( 1.30911, 0, 0, 0, 1.30911, 0, 0, 0, 1.30911, -10.5839, 0.791643, 3.58537 )
 use_collision = true
 height = 0.144612
 sides = 16
@@ -60,160 +58,157 @@ sides = 16
 transform = Transform( 0.178613, 0, 0, 0, 1, 0, 0, 0, 0.201605, 0, -0.166559, 0 )
 operation = 2
 
-[node name="CSGBox5" type="CSGBox" parent="."]
-transform = Transform( 0.64792, 0, 0.761708, 0, 1, 0, -0.761708, 0, 0.64792, -4.58003, 0.547073, 2.41099 )
-use_collision = true
-width = 3.17629
-height = 0.472807
-depth = 0.597045
-
 [node name="CSGBox6" type="CSGBox" parent="."]
-transform = Transform( 0.780627, 0, -0.624997, 0, 1, 0, 0.624997, 0, 0.780627, -4.87093, 0.547073, -2.30434 )
+transform = Transform( 1.67277, 0, -1.33928, 0, 1, 0, 0.624997, 0, 0.780627, -17.8129, 0.547073, -2.30434 )
+visible = false
 use_collision = true
 width = 3.17629
 height = 0.472807
 depth = 0.597045
 
 [node name="CSGCylinder2" type="CSGCylinder" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.032, 0.791643, 4.01237 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2316, 0.791643, 9.07492 )
+use_collision = true
 height = 0.144612
 sides = 16
 
 [node name="CSGBox7" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.95885, 0.324774, -4.7009 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6072, 0.324774, -4.46619 )
 use_collision = true
 height = 0.733153
 
-[node name="CSGBox8" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -9.15484, 0.52762, 3.30034 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
-[node name="CSGBox9" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -9.15484, 0.52762, 4.72102 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
-[node name="CSGBox10" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -11.4198, 0.52762, 3.30034 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
-[node name="CSGBox11" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -11.4198, 0.52762, 4.72102 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
-[node name="CSGBox12" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -13.728, 0.52762, 3.30034 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
-[node name="CSGBox13" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -13.728, 0.52762, 4.72102 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-
 [node name="CSGBox14" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -15.993, 0.52762, 3.30034 )
+transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -47.3856, 0.472413, 7.70595 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox24" type="CSGBox" parent="."]
+transform = Transform( 3.12975, 0, 0, 0, 0.76544, 0, 0, 0, 2.80765, -52.5265, 0.472413, 3.56389 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox27" type="CSGBox" parent="."]
+transform = Transform( 2.18197, 0, 0, 0, 0.76544, 0, 0, 0, 2.08766, -54.8444, 0.472413, -4.3914 )
 use_collision = true
 height = 0.484142
 depth = 0.685883
 
 [node name="CSGBox15" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 1, 0, 0, 0, 1, -15.993, 0.52762, 4.72102 )
+transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -41.3774, 0.472413, 11.609 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox28" type="CSGBox" parent="."]
+transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -36.6213, 0.472413, 11.609 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox29" type="CSGBox" parent="."]
+transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -32.556, 0.472413, 7.64503 )
 use_collision = true
 height = 0.484142
 depth = 0.685883
 
 [node name="CSGBox16" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1076, 0.592021, -4.74976 )
+transform = Transform( 2.02692, 0, 0, 0, 0.576459, 0, 0, 0, 1.41939, -30.9111, 0.592021, -4.74976 )
 use_collision = true
 width = 2.09946
 height = 0.343925
 depth = 0.337201
 
 [node name="CSGBox17" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2832, 0.643468, -4.74976 )
+transform = Transform( 1.4884, 0, 0, 0, 0.772902, 0, 0, 0, 2.27045, -39.4137, 0.643468, -4.74976 )
 use_collision = true
-width = 4.27682
+width = 4.55634
 height = 0.244468
 depth = 0.155568
 
 [node name="CSGBox18" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6001, 0.592021, -6.66483 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31724, -49.6201, 0.592021, -6.66483 )
 use_collision = true
 width = 1.40979
 height = 0.343925
 depth = 0.337201
 
 [node name="CSGBox19" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7344, 0.592021, -3.08555 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5181, -49.793, 0.592021, -3.08555 )
 use_collision = true
 width = 1.40979
 height = 0.343925
 depth = 0.337201
 
-[node name="CSGBox20" type="CSGBox" parent="."]
-transform = Transform( 0.632692, 0, 0.774404, 0, 1, 0, -0.774404, 0, 0.632692, -30.419, 0.517599, -5.8017 )
-use_collision = true
-width = 3.66444
-height = 0.343925
-depth = 0.57407
-
-[node name="CSGBox21" type="CSGBox" parent="."]
-transform = Transform( 0.701569, 0, -0.712602, 0, 1, 0, 0.712602, 0, 0.701569, -19.7162, 0.517599, 4.13635 )
-use_collision = true
-width = 3.66444
-height = 0.343925
-depth = 0.57407
-
 [node name="CSGBox22" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6249, 0, -0.289392 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1605, 0, -0.289392 )
 use_collision = true
 width = 8.6571
 height = 0.935194
 depth = 3.14985
 
 [node name="CSGCylinder3" type="CSGCylinder" parent="."]
-transform = Transform( 1.23551, 0, 0, 0, 1, 0, 0, 0, 1.13445, -44.3734, 0.435496, -0.281605 )
+transform = Transform( 1.23551, 0, 0, 0, 1, 0, 0, 0, 1.13445, -73.1081, 0.435496, -0.281605 )
 use_collision = true
 height = 0.144612
 sides = 16
 smooth_faces = false
 
 [node name="CSGBox23" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.7423, 0.251296, -0.319833 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.4753, 0.251296, -0.319833 )
 use_collision = true
 width = 5.57227
 height = 0.345084
 depth = 0.399203
 
-[node name="CSGBox24" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8779, 0, 8.70313 )
-use_collision = true
-width = 4.98639
-depth = 4.42219
+[node name="Troll7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 3.92038, 0, 0, 0, 5.0952, 0, 0, 0, 0.914307, -81.1873, -0.409573, -3.64596 )
 
 [node name="CSGBox25" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7543, 0, -7.78436 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.5644, 0, -5.48351 )
 use_collision = true
 width = 4.98639
 depth = 4.42219
 
 [node name="Perder" type="Spatial" parent="."]
+transform = Transform( 1.90656, 0, 0, 0, 1.90656, 0, 0, 0, 1.90656, 0, -1.86183, 0 )
 
 [node name="Area" type="Area" parent="Perder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.94462, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Perder/Area"]
 transform = Transform( 67.6778, 0, 0, 0, 0.146577, 0, 0, 0, 37.1121, -25.3823, -6.64714, 0 )
 shape = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.781597, 0.623784, 0, -0.623784, 0.781597, -17.4751, 7.91772, 18.6357 )
+
+[node name="Troll" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0200884, 0, -0.357123, 0, 1, 0, 0.644695, 0, 0.00142148, -29.3238, 0.403568, 12.9865 )
+
+[node name="Troll2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -33.3522, 0.403568, 9.2617 )
+
+[node name="Troll3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -38.201, 0.403568, 9.2617 )
+
+[node name="Troll4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -44.1193, 0.403568, 13.1887 )
+
+[node name="Troll5" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.386495, 0, -0.00837935, -41.6713, 0.403568, -2.05066 )
+
+[node name="Troll6" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.386495, 0, -0.00837935, -41.6713, 0.403568, -5.54931 )
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( 4.9968, 0, 0, 0, 0.289753, 0, 0, 0, 0.620357, -17.8291, 0, 7.26372 )
+
+[node name="CSGBox8" type="CSGBox" parent="."]
+transform = Transform( 4.9968, 0, 0, 0, 0.289753, 0, 0, 0, 0.620357, -14.5822, 0, -3.47061 )
+width = 2.09185
+depth = 1.81769
 
 [connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]

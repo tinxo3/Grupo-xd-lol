@@ -11,7 +11,7 @@ extents = Vector3( 3.49384, 0.532158, 3.61183 )
 albedo_color = Color( 1, 0.207843, 0.207843, 1 )
 
 [node name="powerup_malo" type="Area"]
-transform = Transform( 0.20764, 0, 0, 0, 0.20764, 0, 0, 0, 0.20764, 0, 0, 0 )
+transform = Transform( 1.05559, 0, 0, 0, 0.462026, 0, 0, 0, 0.462026, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
