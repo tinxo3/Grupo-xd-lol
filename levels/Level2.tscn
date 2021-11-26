@@ -168,181 +168,151 @@ shape = SubResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6523, 0.923066, 7.34629 )
 
 [node name="coin" parent="coins group/coins holder" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder2" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6523, 0.923066, 10.9527 )
 
 [node name="coin" parent="coins group/coins holder2" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder3" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49964, 0.923066, 10.9527 )
 
 [node name="coin" parent="coins group/coins holder3" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder4" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49964, 0.923066, 7.38446 )
 
 [node name="coin" parent="coins group/coins holder4" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder5" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49964, 0.923066, 18.2417 )
 
 [node name="coin" parent="coins group/coins holder5" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder6" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49964, 0.923067, 22.058 )
 
 [node name="coin" parent="coins group/coins holder6" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder8" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27067, 0.923067, 22.058 )
 
 [node name="coin" parent="coins group/coins holder8" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder9" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27067, 0.923067, 18.2417 )
 
 [node name="coin" parent="coins group/coins holder9" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder10" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0954033, 0.923067, 29.0417 )
 
 [node name="coin" parent="coins group/coins holder10" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder11" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.0190778, 2.69051, 33.1 )
 
 [node name="coin" parent="coins group/coins holder11" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder12" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0190778, 2.75267, 38.4107 )
 
 [node name="coin" parent="coins group/coins holder12" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder13" type="Spatial" parent="coins group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0190778, 2.72049, 43.7153 )
 
 [node name="coin" parent="coins group/coins holder13" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder14" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.0190778, 2.71055, 48.9435 )
 
 [node name="coin" parent="coins group/coins holder14" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder16" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -4.94588, 0.582211, 54.3573 )
 
 [node name="coin" parent="coins group/coins holder16" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder17" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 5.25052, 0.325069, 54.4695 )
 
 [node name="coin" parent="coins group/coins holder17" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder18" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.438388, 72.0227 )
 
 [node name="coin" parent="coins group/coins holder18" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder19" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.311845, 87.6333 )
 
 [node name="coin" parent="coins group/coins holder19" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder21" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.429811, 0.280742, 99.4644 )
 
 [node name="coin" parent="coins group/coins holder21" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder22" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.84048, 0.92307, 108.257 )
 
 [node name="coin" parent="coins group/coins holder22" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder23" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.757818, 0.92307, 119.149 )
 
 [node name="coin" parent="coins group/coins holder23" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder24" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 9.03421, 0.686398, 98.7167 )
 
 [node name="coin" parent="coins group/coins holder24" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder25" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 19.7331, 0.637886, 98.7167 )
 
 [node name="coin" parent="coins group/coins holder25" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder26" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -7.76624, 0.583312, 99.5861 )
 
 [node name="coin" parent="coins group/coins holder26" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder27" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -18.8933, 0.600474, 99.5861 )
 
 [node name="coin" parent="coins group/coins holder27" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder28" type="Spatial" parent="coins group"]
 transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923071, 99.5248 )
 
 [node name="coin" parent="coins group/coins holder28" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder29" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923071, 98.4656 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -36.1593, 0.923071, 96.663 )
 
 [node name="coin" parent="coins group/coins holder29" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder30" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923071, 97.2584 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -38.5635, 0.923071, 98.153 )
 
 [node name="coin" parent="coins group/coins holder30" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder31" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923071, 100.63 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -38.4248, 0.923071, 100.426 )
 
 [node name="coin" parent="coins group/coins holder31" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder32" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923072, 102.421 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923072, 98.3111 )
 
 [node name="coin" parent="coins group/coins holder32" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="coins holder33" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -33.7365, 0.923072, 101.595 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, -36.0093, 0.923072, 101.595 )
 
 [node name="coin" parent="coins group/coins holder33" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0

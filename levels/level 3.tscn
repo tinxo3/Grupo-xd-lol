@@ -218,9 +218,11 @@ transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.386495, 0, -0.
 
 [node name="CSGBox5" type="CSGBox" parent="."]
 transform = Transform( 4.9968, 0, 0, 0, 0.289753, 0, 0, 0, 0.620357, -17.8291, 0, 7.26372 )
+use_collision = true
 
 [node name="CSGBox8" type="CSGBox" parent="."]
 transform = Transform( 4.9968, 0, 0, 0, 0.289753, 0, 0, 0, 0.620357, -14.5822, 0, -3.47061 )
+use_collision = true
 width = 2.09185
 depth = 1.81769
 
