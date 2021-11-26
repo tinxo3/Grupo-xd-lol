@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Menuprincipal.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Main Menu Background.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Logo.png" type="Texture" id=4]
-[ext_resource path="res://Assets/martin_cancion_menu.mp3" type="AudioStream" id=5]
 
 [sub_resource type="ImageTexture" id=6]
 
@@ -176,11 +175,6 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
 anims/fade_in = SubResource( 4 )
-
-[node name="music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -8.0
-autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]

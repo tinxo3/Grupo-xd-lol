@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 GlobalSettings="res://new_script.gd"
 Globals="*res://Singletones/Globals.gd"
+MusicController="*res://MusicController.tscn"
 
 [global]
 
