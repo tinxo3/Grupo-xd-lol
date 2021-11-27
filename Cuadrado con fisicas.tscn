@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.13261, 0.1, 1.77696 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0.670588, 0, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 3 )
+size = Vector3( 3.5, 0.2, 4.3 )
+
+[node name="Cuadrado con fisicas" type="Spatial"]
+
+[node name="RigidBody" type="RigidBody" parent="."]
+mass = 3.49
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody/CollisionShape"]
+transform = Transform( -0.0042586, 0, 0.999991, 0, 1, 0, -0.999991, 0, -0.0042586, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="RigidBody" type="RigidBody" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45057, -0.0473619 )
+
+[node name="ConeTwistJoint" type="ConeTwistJoint" parent="RigidBody"]
+transform = Transform( -0.0152187, 0, 0.999884, 0, 1, 0, -0.999884, 0, -0.0152187, 0, -0.978192, 0 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../RigidBody")
+swing_span = -0.4
+twist_span = 45.0
+bias = 0.1
+softness = 0.5
+relaxation = 0.3

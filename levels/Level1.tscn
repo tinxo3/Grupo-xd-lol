@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://levels/contador.gd" type="Script" id=6]
 [ext_resource path="res://Assets/aAbstractGroovy.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://perder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Disco con fisicas.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Cuadrado con fisicas.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Rectangulo con fisicas.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 49
@@ -21,84 +24,52 @@ font_data = ExtResource( 7 )
 pause_mode = 2
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715709, 0, 0.403293 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715709, -0.00501251, 1.52733 )
 use_collision = true
-width = 5.02714
+width = 6.73722
 height = 1.402
-depth = 6.46068
+depth = 7.46467
 
 [node name="CSGPolygon" type="CSGPolygon" parent="CSGBox"]
-transform = Transform( -0.00823144, -0.00129419, -1.40021, -0.00201144, 1.25356, -0.00228081, 2.27909, 0.00363193, 0.0120953, 1.11779, 0.699591, -3.21699 )
-polygon = PoolVector2Array( 0, 0, 0, 1, 0.572088, 1.00617, 2.03627, -0.0567617 )
-
-[node name="CSGBox2" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09041, 1.84362, -5.15628 )
-use_collision = true
-width = 2.76076
-height = 0.337052
-depth = 2.24448
-
-[node name="CSGBox3" type="CSGBox" parent="."]
-transform = Transform( -0.0129674, 0, -0.999916, 0, 1, 0, 0.999916, 0, -0.0129674, 1.09414, 1.98505, -10.1063 )
-use_collision = true
-width = 4.232
-height = 0.43
-depth = 1.049
+transform = Transform( -0.014198, -0.00130369, -1.40024, -0.00201144, 1.25356, -0.00228081, 2.27906, 0.00362853, 0.00842953, 1.10735, 0.51904, -1.8798 )
+polygon = PoolVector2Array( -0.835728, 0.13475, -0.84204, 1.01478, 0.00859106, 1.03029, 2.03627, -0.0567617 )
+depth = 1.63
 
 [node name="CSGBox4" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05603, 3.18105, -14.7264 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81695, 3.18105, -18.0781 )
 use_collision = true
 width = 2.38198
 height = 0.337052
 depth = 2.215
 
-[node name="CSGCylinder" type="CSGCylinder" parent="."]
-transform = Transform( 0.476278, 0, 0, 0, 1, 0, 0, 0, 0.485715, -1.40583, 3.24236, -14.7411 )
-use_collision = true
-height = 0.235127
-
-[node name="CSGCylinder" type="CSGCylinder" parent="CSGCylinder"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143526, 0, 0.0072937 )
-operation = 2
-radius = 0.153726
-
-[node name="CSGCylinder2" type="CSGCylinder" parent="."]
-transform = Transform( 0.476278, 0, 0, 0, 1, 0, 0, 0, 0.485715, -3.41124, 3.24236, -14.7299 )
-use_collision = true
-height = 0.235127
-
-[node name="CSGCylinder" type="CSGCylinder" parent="CSGCylinder2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0143526, 0, 0.0072937 )
-operation = 2
-radius = 0.153726
-
 [node name="CSGBox6" type="CSGBox" parent="."]
-transform = Transform( -0.375682, 0, -0.00188487, 0, 1, 0, 0.000708103, 0, -0.999998, -5.68121, 0.904819, -17.3662 )
+transform = Transform( -0.375682, 0, -0.00188487, 0, 1, 0, 0.000708103, 0, -0.999998, -10.8123, 0.904819, -20.3979 )
 use_collision = true
-width = 3.38765
+width = 5.07407
 height = 1.40193
 depth = 6.46068
 
 [node name="CSGPolygon" type="CSGPolygon" parent="CSGBox6"]
-transform = Transform( -0.0197453, -0.00310446, -3.35877, -0.00201144, 1.25356, -0.00228081, 2.27909, 0.00363193, 0.0120953, -1.66365, 0.699592, -3.2216 )
+transform = Transform( -0.0197453, -0.00310446, -3.35877, -0.00201144, 1.25356, -0.00228081, 2.27909, 0.00363193, 0.0120953, -2.5161, 0.699592, -3.2222 )
 polygon = PoolVector2Array( 0, 0, 0, 1, 0.572088, 1.00617, 2.03627, -0.0567617 )
+depth = 1.5
 
 [node name="CSGBox5" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65694, 3.46078, -22.6646 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6209, 3.46078, -25.8301 )
 use_collision = true
-width = 1.68105
+width = 3.42968
 height = 0.337052
-depth = 1.41421
+depth = 3.03091
 
 [node name="CSGBox7" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.56011, 3.9611, -26.3221 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5809, 3.9611, -29.7622 )
 use_collision = true
 width = 2.59508
 height = 0.337052
 depth = 1.86429
 
 [node name="CSGBox" type="CSGBox" parent="CSGBox7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00255346, 1.17127, -0.888952 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035429, 1.17127, -0.867456 )
 width = 2.60608
 depth = 0.0777411
 
@@ -110,7 +81,7 @@ height = 1.31961
 depth = 0.197709
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0964691, -5.6132, 4.93111, -27.2081 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0964691, -10.5254, 4.93111, -30.5889 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 1.39712, 0 )
@@ -118,67 +89,67 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 1.39712, 0 )
 [node name="Coins group" type="Spatial" parent="."]
 
 [node name="Coin holder" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50185, 1.23337, 2.49753 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06795, 1.23337, 3.72444 )
 
 [node name="coin" parent="Coins group/Coin holder" instance=ExtResource( 2 )]
 
 [node name="Coin holder2" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 1.54014, 0.567403 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41927, 1.66272, 2.12774 )
 
 [node name="coin" parent="Coins group/Coin holder2" instance=ExtResource( 2 )]
 
 [node name="Coin holder3" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 2.35872, -2.2073 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55296, 2.35872, -1.06511 )
 
 [node name="coin" parent="Coins group/Coin holder3" instance=ExtResource( 2 )]
 
 [node name="Coin holder4" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 2.35872, -5.16134 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55012, 2.44719, -5.58577 )
 
 [node name="coin" parent="Coins group/Coin holder4" instance=ExtResource( 2 )]
 
 [node name="Coin holder5" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 2.61318, -8.53126 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71369, 3.03456, -9.23794 )
 
 [node name="coin" parent="Coins group/Coin holder5" instance=ExtResource( 2 )]
 
 [node name="Coin holder6" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 2.61318, -11.8753 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34007, 3.09555, -13.8321 )
 
 [node name="coin" parent="Coins group/Coin holder6" instance=ExtResource( 2 )]
 
 [node name="Coin holder7" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0472, 3.73288, -14.727 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75356, 3.73288, -17.8517 )
 
 [node name="coin" parent="Coins group/Coin holder7" instance=ExtResource( 2 )]
 
 [node name="Coin holder8" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44688, 3.73288, -14.727 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28011, 3.73288, -18.0179 )
 
 [node name="coin" parent="Coins group/Coin holder8" instance=ExtResource( 2 )]
 
 [node name="Coin holder9" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47153, 3.73288, -14.727 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59249, 3.73288, -17.9655 )
 
 [node name="coin" parent="Coins group/Coin holder9" instance=ExtResource( 2 )]
 
 [node name="Coin holder10" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72039, 3.23452, -15.2977 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3324, 3.23452, -17.8588 )
 
 [node name="coin" parent="Coins group/Coin holder10" instance=ExtResource( 2 )]
 
 [node name="Coin holder11" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72039, 2.58329, -17.5425 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.457, 2.58329, -20.4344 )
 
 [node name="coin" parent="Coins group/Coin holder11" instance=ExtResource( 2 )]
 
 [node name="Coin holder12" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72039, 2.07867, -19.9713 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4595, 2.07867, -22.7844 )
 
 [node name="coin" parent="Coins group/Coin holder12" instance=ExtResource( 2 )]
 
 [node name="Coin holder13" type="Spatial" parent="Coins group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72039, 4.05546, -22.7012 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7341, 4.04125, -25.6036 )
 
 [node name="coin" parent="Coins group/Coin holder13" instance=ExtResource( 2 )]
 
@@ -228,6 +199,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.4605, -15.7991 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.00844725, 0.999964, 0, -0.999964, 0.00844725, 0, 22.7426, -14.55 )
 shadow_enabled = true
+
+[node name="Disco con fisicas" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31577, 2.62316, -18.0306 )
+
+[node name="Disco con fisicas2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56912, 2.62316, -18.1482 )
+
+[node name="Cuadrado con fisicas" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52345, 1.80142, -5.75542 )
+
+[node name="Rectangulo con fisicas" parent="." instance=ExtResource( 11 )]
+transform = Transform( -0.0271017, 0, -0.999633, 0, 1, 0, 0.999633, 0, -0.0271017, 1.73173, 1.88292, -12.3686 )
 
 [connection signal="body_entered" from="Coins group/Coin holder/coin" to="Coins group/Coin holder/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins group/Coin holder/coin" to="Control/contador" method="_on_coinCollected"]
