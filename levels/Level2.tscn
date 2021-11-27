@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Troll.tscn" type="PackedScene" id=2]
@@ -10,12 +10,13 @@
 [ext_resource path="res://levels/contador.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Assets/aAbstractGroovy.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://skybox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Cuadrado con fisicas.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0, 0.133333, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.282353, 0.882353, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 1, 0.537255, 0, 1 )
@@ -35,7 +36,7 @@ pause_mode = 2
 transform = Transform( 0.999811, 0, 0, 0, 0.999811, 0, 0, 0, 0.999811, 0, 0, 0 )
 
 [node name="spawn" type="CSGBox" parent="."]
-transform = Transform( 7.96617, 0, 0, 0, 0.324611, 0, 0, 0, 6.61733, 1.01487, -0.114559, -2.95802 )
+transform = Transform( 6.48494, 0, 0, 0, 0.264253, 0, 0, 0, 5.38691, -0.0524828, -0.114559, -3.39307 )
 use_collision = true
 depth = 2.25048
 
@@ -121,13 +122,15 @@ use_collision = true
 depth = 2.25048
 
 [node name="fisicas" type="CSGBox" parent="."]
-transform = Transform( -0.0143462, 0, -0.517361, 0, 0.144036, 0, 1.60853, 0, -0.00461425, 0.20562, -0.142378, 72.3719 )
+transform = Transform( -0.0194456, 0, -0.70126, 0, 0.195234, 0, 2.18029, 0, -0.00625441, 0.20562, -0.142378, 72.3719 )
+visible = false
 use_collision = true
 depth = 2.25048
 material = SubResource( 4 )
 
 [node name="fisicas2" type="CSGBox" parent="."]
-transform = Transform( 1.60859, 0, 0, 0, 0.144036, 0, 0, 0, 0.517382, 0.205621, -0.142378, 87.5248 )
+transform = Transform( 2.23336, 0, 0, 0, 0.199979, 0, 0, 0, 0.718329, 0.205621, -0.142378, 87.5248 )
+visible = false
 use_collision = true
 depth = 2.25048
 material = SubResource( 4 )
@@ -141,7 +144,7 @@ transform = Transform( 0.314677, 0, 0, 0, 0.11633, 0, 0, 0, 3.25472, 0.0212029, 
 use_collision = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.224903, 1.40087, -4.99396 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.224903, 12.1022, -6.81229 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.998014, -1.93882e-09, -0.0629996, -0.0629995, -0.00178026, 0.998012, -0.000112157, 0.999998, 0.00177672, 0, 31.8742, 53.9548 )
@@ -151,7 +154,7 @@ shadow_enabled = true
 transform = Transform( 0.950416, 0, 0, 0, 0.950416, 0, 0, 0, 0.950416, -0.300708, 0.388181, 54.5096 )
 
 [node name="powerup_malo" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1.05559, 0, 0, 0, 0.462026, 0, 0, 0, 0.462026, 0, 0.234962, 2.85864 )
+transform = Transform( 1.05559, 0, 0, 0, 0.462026, 0, 0, 0, 0.462026, 0, 0.234962, 1.20797 )
 
 [node name="Perder" type="Spatial" parent="."]
 
@@ -246,7 +249,7 @@ transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.
 [node name="coin" parent="coins group/coins holder18" instance=ExtResource( 6 )]
 
 [node name="coins holder19" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.311845, 87.6333 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.526128, 87.6333 )
 
 [node name="coin" parent="coins group/coins holder19" instance=ExtResource( 6 )]
 
@@ -348,6 +351,14 @@ custom_colors/font_color = Color( 1, 0.843137, 0.184314, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "Q"
 script = ExtResource( 8 )
+
+[node name="Node" parent="." instance=ExtResource( 11 )]
+
+[node name="Cuadrado con fisicas" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.611409, 0, 0, 0, 1, 0, 0, 0, 1.85894, 0.502162, -0.0355073, 71.4492 )
+
+[node name="Cuadrado con fisicas2" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.611409, 0, 0, 0, 1, 0, 0, 0, 1.85894, 0.502163, -0.0355073, 87.6708 )
 
 [connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="coins group/coins holder/coin" to="coins group/coins holder/coin" method="_on_coin_body_entered"]

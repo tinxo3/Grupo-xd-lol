@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/perderlvl3.gd" type="Script" id=2]
@@ -8,6 +8,24 @@
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/aAbstractGroovy.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://levels/contador.gd" type="Script" id=8]
+[ext_resource path="res://skybox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://pad.tscn" type="PackedScene" id=10]
+[ext_resource path="res://powerup_malo.tscn" type="PackedScene" id=11]
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 1, 0.560784, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 1, 0.584314, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 1, 0.678431, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 1, 0.560784, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0, 0.0156863, 1, 1 )
 
 [sub_resource type="BoxShape" id=1]
 
@@ -24,20 +42,20 @@ pause_mode = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00234568, 0.0102912, -0.00272226 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.999929, 0, -0.011903, 0, 1, 0, 0.011903, 0, 0.999929, 6.1235, 1.82431, 3.63335 )
+transform = Transform( 0.999929, 0, -0.011903, 0, 1, 0, 0.011903, 0, 0.999929, 6.1235, 13.8886, 3.63335 )
 
 [node name="Troll8" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.41266, 0, -0.0168161, 0, 2.68134, 0, 0.00359564, 0, 0.302056, 0.176465, 0.179964, -11.5384 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 2.12623, 0, 0, 0, 0.567508, 0, 0, 0, 1.52817, -2.96896, 0, 3.58537 )
+transform = Transform( 2.12623, 0, 0, 0, 0.567508, 0, 0, 0, 1.52817, -2.51543, 0, 3.58537 )
 use_collision = true
 
 [node name="CSGPolygon" type="CSGPolygon" parent="CSGBox"]
 transform = Transform( 1.19457, 0, 0, 0, 1, 0, 0, 0, 3.07122, -0.584933, 0, 1.50104 )
 
 [node name="CSGBox2" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, -3.00134, 0.591062, -2.16315 )
+transform = Transform( 1, 0, 0, 0, 0.341941, 0, 0, 0, 1, -2.62886, 0.591062, -2.16315 )
 use_collision = true
 width = 0.708346
 depth = 3.63602
@@ -63,6 +81,7 @@ depth = 2.34595
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 transform = Transform( 1.30911, 0, 0, 0, 1.30911, 0, 0, 0, 1.30911, -10.5839, 0.791643, 3.58537 )
+visible = false
 use_collision = true
 height = 0.144612
 sides = 16
@@ -85,6 +104,13 @@ use_collision = true
 height = 0.144612
 sides = 16
 
+[node name="CSGCylinder4" type="CSGCylinder" parent="."]
+transform = Transform( 1.44889, 0, 0, 0, 1.44889, 0, 0, 0, 1.44889, -10.3692, 0.652383, 2.59414 )
+use_collision = true
+height = 0.144612
+sides = 16
+material = SubResource( 8 )
+
 [node name="CSGBox7" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6072, 0.324774, -4.46619 )
 use_collision = true
@@ -92,6 +118,7 @@ height = 0.733153
 
 [node name="CSGBox14" type="CSGBox" parent="."]
 transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -47.3856, 0.472413, 7.70595 )
+visible = false
 use_collision = true
 height = 0.484142
 depth = 0.685883
@@ -101,27 +128,36 @@ transform = Transform( 3.12975, 0, 0, 0, 0.76544, 0, 0, 0, 2.80765, -52.5265, 0.
 use_collision = true
 height = 0.484142
 depth = 0.685883
+material = SubResource( 4 )
 
 [node name="CSGBox27" type="CSGBox" parent="."]
 transform = Transform( 2.18197, 0, 0, 0, 0.76544, 0, 0, 0, 2.08766, -54.8444, 0.472413, -4.3914 )
 use_collision = true
 height = 0.484142
 depth = 0.685883
-
-[node name="CSGBox15" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -41.3774, 0.472413, 11.609 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
+material = SubResource( 5 )
 
 [node name="CSGBox28" type="CSGBox" parent="."]
 transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -36.6213, 0.472413, 11.609 )
+visible = false
 use_collision = true
 height = 0.484142
 depth = 0.685883
 
 [node name="CSGBox29" type="CSGBox" parent="."]
-transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -32.556, 0.472413, 7.64503 )
+transform = Transform( 1.64727, 0, 0, 0, 1.31143, 0, 0, 0, 1.87228, -32.556, 0.472413, 7.64503 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox31" type="CSGBox" parent="."]
+transform = Transform( 1.64727, 0, 0, 0, 1.31143, 0, 0, 0, 1.87228, -41.6655, 0.292108, 11.5229 )
+use_collision = true
+height = 0.484142
+depth = 0.685883
+
+[node name="CSGBox30" type="CSGBox" parent="."]
+transform = Transform( 1.64727, 0, 0, 0, 1.31143, 0, 0, 0, 1.87228, -46.6532, 0.358818, 7.64503 )
 use_collision = true
 height = 0.484142
 depth = 0.685883
@@ -141,21 +177,28 @@ height = 0.244468
 depth = 0.155568
 
 [node name="CSGBox18" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.31724, -49.6201, 0.592021, -6.66483 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.33963, -49.6201, 0.592021, -6.66483 )
+use_collision = true
+width = 1.40979
+height = 0.343925
+depth = 0.337201
+
+[node name="CSGBox20" type="CSGBox" parent="."]
+transform = Transform( 1.87931, 0, 0, 0, 0.419847, 0, 0, 0, 2.3046, -46.2103, 0.592021, -6.66813 )
 use_collision = true
 width = 1.40979
 height = 0.343925
 depth = 0.337201
 
 [node name="CSGBox19" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5181, -49.793, 0.592021, -3.08555 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.02878, -49.793, 0.592021, -3.08555 )
 use_collision = true
 width = 1.40979
 height = 0.343925
 depth = 0.337201
 
 [node name="CSGBox22" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1605, 0, -0.289392 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.09692, -63.1605, 0, -0.289392 )
 use_collision = true
 width = 8.6571
 height = 0.935194
@@ -167,22 +210,37 @@ use_collision = true
 height = 0.144612
 sides = 16
 smooth_faces = false
+material = SubResource( 6 )
 
 [node name="CSGBox23" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.4753, 0.251296, -0.319833 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.35035, -81.7073, 0.251296, -0.319833 )
 use_collision = true
 width = 5.57227
 height = 0.345084
 depth = 0.399203
 
 [node name="Troll7" parent="." instance=ExtResource( 3 )]
-transform = Transform( 3.92038, 0, 0, 0, 5.0952, 0, 0, 0, 0.914307, -81.1873, -0.409573, -3.64596 )
+transform = Transform( 3.92038, 0, 0, 0, 5.0952, 0, 0, 0, 0.914307, -80.5491, -0.409573, -3.64596 )
 
 [node name="CSGBox25" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.5644, 0, -5.48351 )
 use_collision = true
 width = 4.98639
 depth = 4.42219
+
+[node name="CSGBox32" type="CSGBox" parent="."]
+transform = Transform( 0.113788, 0, 0, 0, 0.305379, 0, 0, 0, 0.140881, -89.5644, 1.5128, -5.48351 )
+use_collision = true
+width = 4.98639
+depth = 4.42219
+material = SubResource( 7 )
+
+[node name="CSGBox33" type="CSGBox" parent="."]
+transform = Transform( 0.113788, 0, 0, 0, 0.305379, 0, 0, 0, 0.140881, -90.1594, 1.5128, 4.62369 )
+use_collision = true
+width = 4.98639
+depth = 4.42219
+material = SubResource( 7 )
 
 [node name="Perder" type="Spatial" parent="."]
 transform = Transform( 1.90656, 0, 0, 0, 1.90656, 0, 0, 0, 1.90656, 0, -1.86183, 0 )
@@ -200,22 +258,30 @@ transform = Transform( 1, 0, 0, 0, 0.0501575, 0.998741, 0, -0.998741, 0.0501575,
 shadow_enabled = true
 
 [node name="Troll" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.0200884, 0, -0.357123, 0, 1, 0, 0.644695, 0, 0.00142148, -29.3238, 0.403568, 12.9865 )
+transform = Transform( 0.0291699, 0, -0.51857, 0, 1.45208, 0, 0.936146, 0, 0.0020641, -27.9913, 0.229663, 13.5695 )
+
+[node name="Troll4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0291699, 0, -0.51857, 0, 1.45208, 0, 0.936146, 0, 0.0020641, -31.7999, 0.229663, 9.6876 )
+
+[node name="Troll11" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0291699, 0, -0.51857, 0, 1.45208, 0, 0.936146, 0, 0.0020641, -36.7057, 0.229663, 9.71685 )
+
+[node name="Troll12" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0291699, 0, -0.51857, 0, 1.45208, 0, 0.936146, 0, 0.0020641, -42.3593, 0.229663, 13.6612 )
+
+[node name="Troll9" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0291699, 0, -0.51857, 0, 1.45208, 0, 0.936146, 0, 0.0020641, -31.7219, 0.211025, 13.5695 )
 
 [node name="Troll2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -33.3522, 0.403568, 9.2617 )
+visible = false
 
 [node name="Troll3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -38.201, 0.403568, 9.2617 )
-
-[node name="Troll4" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.00773668, 0, -0.356852, 0, 1, 0, 0.644961, 0, -0.013983, -44.1193, 0.403568, 13.1887 )
+visible = false
 
 [node name="Troll5" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.386495, 0, -0.00837935, -41.6713, 0.403568, -2.05066 )
-
-[node name="Troll6" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.386495, 0, -0.00837935, -41.6713, 0.403568, -5.54931 )
+transform = Transform( -0.011018, 0, -0.508204, 0, 0.599254, 0, 0.492427, 0, -0.010676, -41.6701, 0.403568, -1.87468 )
 
 [node name="CSGBox5" type="CSGBox" parent="."]
 transform = Transform( 4.9968, 0, 0, 0, 0.289753, 0, 0, 0, 0.620357, -17.8291, 0, 7.26372 )
@@ -235,7 +301,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93494, 1.05617, 3.59627 )
 [node name="coin" parent="coin group/Coin holder" instance=ExtResource( 4 )]
 
 [node name="Coin holder2" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01114, 1.29042, -2.04242 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62495, 1.29042, -2.04242 )
 
 [node name="coin" parent="coin group/Coin holder2" instance=ExtResource( 4 )]
 
@@ -255,22 +321,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79384, 1.30828, 15.3785 )
 [node name="coin" parent="coin group/Coin holder5" instance=ExtResource( 4 )]
 
 [node name="Coin holder6" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4501, 1.23975, 3.48264 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9872, 1.23975, 2.62582 )
 
 [node name="coin" parent="coin group/Coin holder6" instance=ExtResource( 4 )]
 
 [node name="Coin holder7" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.79027, 1.29782, 3.55323 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.559, 1.29782, 2.65525 )
 
 [node name="coin" parent="coin group/Coin holder7" instance=ExtResource( 4 )]
 
 [node name="Coin holder8" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5303, 1.27954, 2.73263 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4398, 1.27954, 1.81262 )
 
 [node name="coin" parent="coin group/Coin holder8" instance=ExtResource( 4 )]
 
 [node name="Coin holder9" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5744, 1.21501, 4.24148 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3745, 1.21501, 3.30788 )
 
 [node name="coin" parent="coin group/Coin holder9" instance=ExtResource( 4 )]
 
@@ -340,7 +406,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.4683, 1.05617, 11.6235 )
 [node name="coin" parent="coin group/Coin holder22" instance=ExtResource( 4 )]
 
 [node name="Coin holder23" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.4683, 1.05617, 7.70386 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.6559, 1.05617, 7.70386 )
 
 [node name="coin" parent="coin group/Coin holder23" instance=ExtResource( 4 )]
 
@@ -419,13 +485,43 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.6882, 1.05617, -0.263224 )
 
 [node name="coin" parent="coin group/Coin holder38" instance=ExtResource( 4 )]
 
+[node name="Coin holder47" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.6882, 1.05617, -2.37249 )
+
+[node name="coin" parent="coin group/Coin holder47" instance=ExtResource( 4 )]
+
+[node name="Coin holder48" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0735, 1.05617, -2.37249 )
+
+[node name="coin" parent="coin group/Coin holder48" instance=ExtResource( 4 )]
+
+[node name="Coin holder49" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.972, 1.05617, -2.37249 )
+
+[node name="coin" parent="coin group/Coin holder49" instance=ExtResource( 4 )]
+
+[node name="Coin holder39" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.6882, 1.05617, 1.81067 )
+
+[node name="coin" parent="coin group/Coin holder39" instance=ExtResource( 4 )]
+
+[node name="Coin holder45" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0755, 1.05617, 1.81067 )
+
+[node name="coin" parent="coin group/Coin holder45" instance=ExtResource( 4 )]
+
+[node name="Coin holder46" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.863, 1.05617, 1.81067 )
+
+[node name="coin" parent="coin group/Coin holder46" instance=ExtResource( 4 )]
+
 [node name="Coin holder40" type="Spatial" parent="coin group"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0818, 1.05617, -0.263224 )
 
 [node name="coin" parent="coin group/Coin holder40" instance=ExtResource( 4 )]
 
 [node name="Coin holder41" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.2811, 0.888636, -0.307663 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80.0265, 0.888636, -0.307663 )
 
 [node name="coin" parent="coin group/Coin holder41" instance=ExtResource( 4 )]
 
@@ -435,14 +531,34 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.5848, 0.972265, -0.307663 
 [node name="coin" parent="coin group/Coin holder42" instance=ExtResource( 4 )]
 
 [node name="Coin holder43" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.5242, 1.36175, -5.52924 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -88.5322, 1.36175, -5.52924 )
 
 [node name="coin" parent="coin group/Coin holder43" instance=ExtResource( 4 )]
 
 [node name="Coin holder44" type="Spatial" parent="coin group"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -90.299, 1.30256, 4.48351 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -88.3211, 1.30256, 4.62646 )
 
 [node name="coin" parent="coin group/Coin holder44" instance=ExtResource( 4 )]
+
+[node name="Coin holder51" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -88.3211, 1.30256, 3.21591 )
+
+[node name="coin" parent="coin group/Coin holder51" instance=ExtResource( 4 )]
+
+[node name="Coin holder52" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.0042, 1.30256, 3.21591 )
+
+[node name="coin" parent="coin group/Coin holder52" instance=ExtResource( 4 )]
+
+[node name="Coin holder53" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.0042, 1.30256, 6.1977 )
+
+[node name="coin" parent="coin group/Coin holder53" instance=ExtResource( 4 )]
+
+[node name="Coin holder54" type="Spatial" parent="coin group"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -88.3343, 1.30256, 6.1977 )
+
+[node name="coin" parent="coin group/Coin holder54" instance=ExtResource( 4 )]
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -480,6 +596,23 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node" parent="." instance=ExtResource( 9 )]
+
+[node name="pad" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.37648, 0, 0, 0, 0.720053, 0, 0, 0, 2.08829, -2.6093, 0.849197, 10.7925 )
+
+[node name="pad2" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.37648, 0, 0, 0, 0.720053, 0, 0, 0, 2.08829, -2.62586, 0.849197, -3.578 )
+
+[node name="powerup_malo" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.191307, 0, 0, 0, 0.263353, 0, 0, 0, 0.288344, -24.5794, 0.724245, -4.44941 )
+
+[node name="powerup_malo2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.14477, 0, 0, 0, 0.263353, 0, 0, 0, 0.197121, -31.6517, 0.724245, 7.62689 )
+
+[node name="pad3" parent="." instance=ExtResource( 10 )]
+transform = Transform( 4.71605, 0, 0, 0, 0.720053, 0, 0, 0, 7.13044, -66.1541, 0.467597, -0.845208 )
 
 [connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="coin group/Coin holder/coin" to="coin group/Coin holder/coin" method="_on_coin_body_entered"]
@@ -558,6 +691,18 @@ __meta__ = {
 [connection signal="coinCollected" from="coin group/Coin holder37/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
 [connection signal="body_entered" from="coin group/Coin holder38/coin" to="coin group/Coin holder38/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="coin group/Coin holder38/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder47/coin" to="coin group/Coin holder47/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder47/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder48/coin" to="coin group/Coin holder48/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder48/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder49/coin" to="coin group/Coin holder49/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder49/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder39/coin" to="coin group/Coin holder39/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder39/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder45/coin" to="coin group/Coin holder45/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder45/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder46/coin" to="coin group/Coin holder46/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder46/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
 [connection signal="body_entered" from="coin group/Coin holder40/coin" to="coin group/Coin holder40/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="coin group/Coin holder40/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
 [connection signal="body_entered" from="coin group/Coin holder41/coin" to="coin group/Coin holder41/coin" method="_on_coin_body_entered"]
@@ -568,3 +713,11 @@ __meta__ = {
 [connection signal="coinCollected" from="coin group/Coin holder43/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
 [connection signal="body_entered" from="coin group/Coin holder44/coin" to="coin group/Coin holder44/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="coin group/Coin holder44/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder51/coin" to="coin group/Coin holder51/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder51/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder52/coin" to="coin group/Coin holder52/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder52/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder53/coin" to="coin group/Coin holder53/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder53/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]
+[connection signal="body_entered" from="coin group/Coin holder54/coin" to="coin group/Coin holder54/coin" method="_on_coin_body_entered"]
+[connection signal="coinCollected" from="coin group/Coin holder54/coin" to="Control/ContadorLVL3" method="_on_coinCollected"]

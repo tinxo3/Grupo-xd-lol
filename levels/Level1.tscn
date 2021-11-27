@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Disco con fisicas.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Cuadrado con fisicas.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Rectangulo con fisicas.tscn" type="PackedScene" id=11]
+[ext_resource path="res://skybox.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 49
@@ -84,7 +85,7 @@ depth = 0.197709
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0964691, -10.5254, 4.93111, -30.5889 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 1.39712, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.689919, 7.73558, 0 )
 
 [node name="Coins group" type="Spatial" parent="."]
 
@@ -211,6 +212,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52345, 1.80142, -5.75542 )
 
 [node name="Rectangulo con fisicas" parent="." instance=ExtResource( 11 )]
 transform = Transform( -0.0271017, 0, -0.999633, 0, 1, 0, 0.999633, 0, -0.0271017, 1.73173, 1.88292, -12.3686 )
+
+[node name="Node" parent="." instance=ExtResource( 12 )]
 
 [connection signal="body_entered" from="Coins group/Coin holder/coin" to="Coins group/Coin holder/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins group/Coin holder/coin" to="Control/contador" method="_on_coinCollected"]

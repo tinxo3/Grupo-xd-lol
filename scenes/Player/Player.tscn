@@ -43,9 +43,11 @@ fov = 45.0
 far = 500.0
 
 [node name="powerup_timer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="powerup_malo_timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="timeout" from="powerup_timer" to="." method="_on_powerup_timer_timeout"]
 [connection signal="timeout" from="powerup_malo_timer" to="." method="_on_powerup_malo_timer_timeout"]
