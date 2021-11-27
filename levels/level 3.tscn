@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/perderlvl3.gd" type="Script" id=2]
@@ -11,18 +11,8 @@
 [ext_resource path="res://skybox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://pad.tscn" type="PackedScene" id=10]
 [ext_resource path="res://powerup_malo.tscn" type="PackedScene" id=11]
-
-[sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 1, 0.560784, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 1, 0.584314, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 1, 0.678431, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=6]
-albedo_color = Color( 1, 0.560784, 0, 1 )
+[ext_resource path="res://Rectangulo con fisicas.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Disco con fisicas.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0, 0.0156863, 1, 1 )
@@ -37,12 +27,22 @@ font_data = ExtResource( 6 )
 size = 73
 font_data = ExtResource( 7 )
 
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 3.02631, 0.392509, 0.702249 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 1, 0.6, 0, 1 )
+
+[sub_resource type="CubeMesh" id=10]
+material = SubResource( 9 )
+size = Vector3( 6, 0.75, 1.4 )
+
 [node name="level 3" type="Spatial"]
 pause_mode = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00234568, 0.0102912, -0.00272226 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.999929, 0, -0.011903, 0, 1, 0, 0.011903, 0, 0.999929, 6.1235, 13.8886, 3.63335 )
+transform = Transform( 0.999929, 0, -0.011903, 0, 1, 0, 0.011903, 0, 0.999929, -60.8781, 4.17992, 0.386984 )
 
 [node name="Troll8" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1.41266, 0, -0.0168161, 0, 2.68134, 0, 0.00359564, 0, 0.302056, 0.176465, 0.179964, -11.5384 )
@@ -74,7 +74,7 @@ height = 0.704773
 depth = 0.964082
 
 [node name="CSGBox4" type="CSGBox" parent="."]
-transform = Transform( 2.29842, 0, 0, 0, 0.526712, 0, 0, 0, 3.95431, 6.26484, 0, 3.58537 )
+transform = Transform( 2.29842, 0, 0, 0, 0.526712, 0, 0, 0, 3.95431, 6.85025, -1.90735e-06, 4.19379 )
 use_collision = true
 width = 3.3827
 depth = 2.34595
@@ -104,13 +104,6 @@ use_collision = true
 height = 0.144612
 sides = 16
 
-[node name="CSGCylinder4" type="CSGCylinder" parent="."]
-transform = Transform( 1.44889, 0, 0, 0, 1.44889, 0, 0, 0, 1.44889, -10.3692, 0.652383, 2.59414 )
-use_collision = true
-height = 0.144612
-sides = 16
-material = SubResource( 8 )
-
 [node name="CSGBox7" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6072, 0.324774, -4.46619 )
 use_collision = true
@@ -122,20 +115,6 @@ visible = false
 use_collision = true
 height = 0.484142
 depth = 0.685883
-
-[node name="CSGBox24" type="CSGBox" parent="."]
-transform = Transform( 3.12975, 0, 0, 0, 0.76544, 0, 0, 0, 2.80765, -52.5265, 0.472413, 3.56389 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-material = SubResource( 4 )
-
-[node name="CSGBox27" type="CSGBox" parent="."]
-transform = Transform( 2.18197, 0, 0, 0, 0.76544, 0, 0, 0, 2.08766, -54.8444, 0.472413, -4.3914 )
-use_collision = true
-height = 0.484142
-depth = 0.685883
-material = SubResource( 5 )
 
 [node name="CSGBox28" type="CSGBox" parent="."]
 transform = Transform( 0.96146, 0, 0, 0, 0.76544, 0, 0, 0, 1.09279, -36.6213, 0.472413, 11.609 )
@@ -203,14 +182,6 @@ use_collision = true
 width = 8.6571
 height = 0.935194
 depth = 3.14985
-
-[node name="CSGCylinder3" type="CSGCylinder" parent="."]
-transform = Transform( 1.23551, 0, 0, 0, 1, 0, 0, 0, 1.13445, -73.1081, 0.435496, -0.281605 )
-use_collision = true
-height = 0.144612
-sides = 16
-smooth_faces = false
-material = SubResource( 6 )
 
 [node name="CSGBox23" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.35035, -81.7073, 0.251296, -0.319833 )
@@ -613,6 +584,41 @@ transform = Transform( 0.14477, 0, 0, 0, 0.263353, 0, 0, 0, 0.197121, -31.6517, 
 
 [node name="pad3" parent="." instance=ExtResource( 10 )]
 transform = Transform( 4.71605, 0, 0, 0, 0.720053, 0, 0, 0, 7.13044, -66.1541, 0.467597, -0.845208 )
+
+[node name="Rectangulo con fisicas customizado" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -54.8802, 0.187638, -4.30422 )
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="CollisionShape" type="CollisionShape" parent="Rectangulo con fisicas customizado"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Rectangulo con fisicas customizado/CollisionShape"]
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="RigidBody" type="RigidBody" parent="Rectangulo con fisicas customizado"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96373, 0 )
+
+[node name="ConeTwistJoint" type="ConeTwistJoint" parent="Rectangulo con fisicas customizado"]
+transform = Transform( -0.153089, 0, -0.988212, 0, 1, 0, 0.988212, 0, -0.153089, 3.8147e-06, -1.34904, 0 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../RigidBody")
+swing_span = -0.4
+twist_span = 45.0
+bias = 0.1
+softness = 0.5
+relaxation = 0.3
+
+[node name="Rectangulo con fisicas" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.7812, -0.164028, 3.66819 )
+
+[node name="Disco con fisicas" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3273, 0.232412, 2.6615 )
+
+[node name="Disco con fisicas2" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.9728, -0.107877, -0.391857 )
 
 [connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="coin group/Coin holder/coin" to="coin group/Coin holder/coin" method="_on_coin_body_entered"]

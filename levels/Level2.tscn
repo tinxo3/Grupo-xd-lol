@@ -11,7 +11,7 @@
 [ext_resource path="res://Assets/Happy Lucky Free.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Assets/aAbstractGroovy.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://skybox.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Cuadrado con fisicas.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Rectangulo con fisicas.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0, 0.133333, 1, 1 )
@@ -144,7 +144,7 @@ transform = Transform( 0.314677, 0, 0, 0, 0.11633, 0, 0, 0, 3.25472, 0.0212029, 
 use_collision = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.224903, 12.1022, -6.81229 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24389, 4.89323, 54.4551 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.998014, -1.93882e-09, -0.0629996, -0.0629995, -0.00178026, 0.998012, -0.000112157, 0.999998, 0.00177672, 0, 31.8742, 53.9548 )
@@ -244,12 +244,12 @@ transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 5.25052, 0.3
 [node name="coin" parent="coins group/coins holder17" instance=ExtResource( 6 )]
 
 [node name="coins holder18" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.438388, 72.0227 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 1.66593, 69.2824 )
 
 [node name="coin" parent="coins group/coins holder18" instance=ExtResource( 6 )]
 
 [node name="coins holder19" type="Spatial" parent="coins group"]
-transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 0.526128, 87.6333 )
+transform = Transform( 1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0.235348, 1.19581, 87.6333 )
 
 [node name="coin" parent="coins group/coins holder19" instance=ExtResource( 6 )]
 
@@ -354,11 +354,14 @@ script = ExtResource( 8 )
 
 [node name="Node" parent="." instance=ExtResource( 11 )]
 
-[node name="Cuadrado con fisicas" parent="." instance=ExtResource( 12 )]
-transform = Transform( 0.611409, 0, 0, 0, 1, 0, 0, 0, 1.85894, 0.502162, -0.0355073, 71.4492 )
+[node name="Rectangulo con fisicas2" parent="." instance=ExtResource( 12 )]
+transform = Transform( -0.0063181, 0, 0.99998, 0, 1, 0, -0.99998, 0, -0.0063181, 0.201774, 0.141525, 87.7689 )
 
-[node name="Cuadrado con fisicas2" parent="." instance=ExtResource( 12 )]
-transform = Transform( 0.611409, 0, 0, 0, 1, 0, 0, 0, 1.85894, 0.502163, -0.0355073, 87.6708 )
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 0.314677, 0, 0, 0, 0.11633, 0, 0, 0, 3.25473, 0.272412, 0.676958, 67.6762 )
+use_collision = true
+width = 4.29891
+depth = 2.73768
 
 [connection signal="body_entered" from="Perder/Area" to="Perder/Area" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="coins group/coins holder/coin" to="coins group/coins holder/coin" method="_on_coin_body_entered"]

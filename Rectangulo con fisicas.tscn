@@ -3,11 +3,11 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.08343, 0.5, 1 )
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 1, 0.584314, 0, 1 )
 
 [sub_resource type="CubeMesh" id=3]
-material = SubResource( 2 )
+material = SubResource( 4 )
 size = Vector3( 8.1, 1, 1.9 )
 
 [node name="Rectangulo con fisicas" type="Spatial"]

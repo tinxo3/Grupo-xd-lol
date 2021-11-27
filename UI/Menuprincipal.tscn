@@ -137,7 +137,7 @@ __meta__ = {
 }
 
 [node name="Start" type="Button" parent="VBoxContainer"]
-margin_right = 94.0
+margin_right = 93.0
 margin_bottom = 22.0
 focus_neighbour_top = NodePath("../Quit")
 size_flags_vertical = 3
@@ -146,7 +146,7 @@ text = "Start Game"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 margin_top = 28.0
-margin_right = 94.0
+margin_right = 93.0
 margin_bottom = 50.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
@@ -154,7 +154,7 @@ text = "Options"
 
 [node name="About" type="Button" parent="VBoxContainer"]
 margin_top = 54.0
-margin_right = 94.0
+margin_right = 93.0
 margin_bottom = 76.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
@@ -162,7 +162,7 @@ text = "About"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 margin_top = 56.0
-margin_right = 94.0
+margin_right = 93.0
 margin_bottom = 78.0
 focus_neighbour_bottom = NodePath("../Start")
 size_flags_vertical = 3
